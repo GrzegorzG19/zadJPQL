@@ -48,7 +48,7 @@ public class AuctionService {
             String title = randomAdjective + " " + data[1] + " " + data[2];
             BigDecimal price = new BigDecimal(data[4].replace("\\.", ","));
             LocalDate endDate = LocalDate.parse(data[5]);
-            Auction auction = new Auction(id, title, data[1], data[2], data[3], price, endDate);
+            Auction auction = new Auction(title, data[1], data[2], data[3], price, endDate);
             auctions.add(auction);
         }
     }
